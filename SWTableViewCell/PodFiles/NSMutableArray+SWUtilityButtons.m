@@ -37,6 +37,17 @@
     [self addObject:button];
 }
 
+- (void)sw_addUtilityButtonWithColor:(UIColor *)color icon:(UIImage *)icon title:(NSString *)title
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTitle:title forState:UIControlStateNormal];
+    [button.titleLabel setFont:[UIFont fontWithName:@"SofiaProLight" size:16]];
+    [button setTitleEdgeInsets:UIEdgeInsetsMake(2, 10, 0, 0)];
+    button.backgroundColor = color;
+    [button setImage:icon forState:UIControlStateNormal];
+    [self addObject:button];
+}
+
 - (void)sw_addUtilityButtonWithColor:(UIColor *)color normalIcon:(UIImage *)normalIcon selectedIcon:(UIImage *)selectedIcon {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.backgroundColor = color;
